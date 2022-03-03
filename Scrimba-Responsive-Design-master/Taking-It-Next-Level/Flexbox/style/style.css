@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+}
+
+/* background-color: #FFE600; */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+p {
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+p,
+h1 {
+    margin: 0;
+}
+
+/* typography */
+
+h1 {
+    font-size: 3rem;
+}
+
+h2,
+.intro {
+    font-size: 1.125rem;
+}
+
+
+
+header {
+    background-color: #000;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+/* Layout */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+
+.container-nav {
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: lowercase;
+}
+
+.site-title {
+    padding-top: 1em;
+    background-color: #FFE600;
+    font-size: 1.5rem;
+}
+
+.title-and-symbol {
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em auto;
+    margin-left: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+nav li {
+    margin: 1em auto;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: .875rem;
+    transform: scale(1);
+    transition: all 250ms;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #FFE600;
+    transform: scale(1.2);
+}
+
+.current-page {
+    border-bottom: 2px solid #FFE600;
+}
+
+.nav-mobile {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100%;
+    transform: translateX(0);
+    transition: transform 250ms;
+}
+
+.nav-mobile-closed {
+    transform: translateX(50%);
+}
+
+.close-nav-btn  {
+    background-color: #000;
+    color: #FFE600;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 3rem;
+    padding: .1em;
+    margin-top: .15em;
+    position: absolute;
+    z-index: 1;
+    opacity: .8;
+    top: 0;
+    left: 0;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* Intro Section */
+
+.intro {
+    background-image: url(../image/hero-bg.jpg);
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    padding: 3em 3em 3em 1.7em;
+    color: #fff;
+}
+
+.intro div {
+    width: 60%;
+    margin: 0 0;
+}
+
+.intro span {
+    color: #FFE600;
+}
+
+.intro a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #FFE600;
+    color: #000;
+    font-weight: 700;
+    font-size: .875rem;
+    padding: .8em;
+    margin-top: 2em;
+
+    transition: transform 500ms;
+    transition: color 500ms;
+}
+
+.intro a:hover,
+.intro a:focus {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Secondary Section */
+
+.secondary {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+}
+
+.secondary h2,
+.secondary p {
+    margin: 0;
+}
+
+.secondary p {
+    margin: .5em 0 2em 0;
+}
+
+.secondary h2:after {
+    content: "";
+    padding: .1em;
+    display: block;
+    border-bottom: 2px solid #FFE600;
+    width: 3em;
+    margin: 0 auto;
+}
+
+/* footer */
+
+footer {
+    background-color: #ebebeb;
+}
+
+.footer-info {
+    padding: 2em;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-info a {
+    color: #000;
+    margin: .3em;
+}
+
+.footer-info a:hover,
+.footer-info a:focus {
+    color: blue;
+}
+
+.footer-info h2 {
+    font-weight: 200;
+}
+
+.footer-info p,
+.footer-info h2 span {
+    font-weight: 100;
+}
+
+.footer-info p {
+    margin-bottom: 3em;
+}
+
+/* media */
+
+@media (min-width: 680px) {
+    /* layout */
+
+    .container {
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+
+    .container-flex {
+        flex-direction: row;
+    }
+
+    /* nav */
+
+    nav ul {
+        flex-direction: row;
+        margin-left: 2em;
+    }
+
+    nav li  {
+        margin: 0 1em;
+    }
+
+    .nav-mobile {
+        position: initial;
+        width: initial;
+    }
+
+    .nav-mobile-closed {
+        transform: initial;
+    }
+
+    .close-nav-btn {
+        display: none;
+    }
+
+    /* intro */
+
+    .intro {
+        padding-bottom: 10em;
+    }
+
+    .intro div {
+        width: 50%;
+    }
+    
+    /* secondary */
+
+    .secondary {
+        width: 100%;
+    }
+
+    .secondary div {
+        margin: 2em;
+    }
+
+    /* footer */
+
+    .footer-info {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 1em;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    .footer-text {
+        order: 1;
+        width: 40%;
+    }
+
+    .footer-icons {
+        width: 10%;
+        order: 2;
+        align-self: center;
+    }
+}
